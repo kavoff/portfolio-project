@@ -19,16 +19,6 @@ div::selection {
 	color: #212127;
 }
 
-@font-face {
-    font-family: 'Dela Gothic One';
-    src: url('DelaGothicOne-Regular.eot');
-    src: local('Dela Gothic One Regular'), local('DelaGothicOne-Regular'),
-        url('DelaGothicOne-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 ul, li, a, img,
 h1, h2, h3, h4,
 span, p, div {
@@ -36,6 +26,7 @@ span, p, div {
 	padding: 0;
 }
 
+/* cursor */
 .cursor {
   pointer-events: none;
 }
@@ -64,7 +55,8 @@ span, p, div {
 }
 
 .content {
-	margin: 0 240px;
+	width: 1440px;
+	margin: 0 auto;
 }
 
 #header {
@@ -96,7 +88,7 @@ span, p, div {
 
 .nav__menu li a {
 	font-size: 18px;
-	font-weight: 450;
+	font-weight: 500;
 	line-height: 120%;
 	letter-spacing: 0.01em;
 	text-decoration: none;
@@ -109,6 +101,7 @@ span, p, div {
 
 .h1 {
 	font-family: 'Dela Gothic One';
+	/*font-family: 'Dela Gothic One';*/
 	font-weight: 400;
 	font-size: 160px;
 	line-height: 100%;
@@ -173,7 +166,7 @@ span, p, div {
 
 .body__text {
 	font-weight: 400;
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 140%;
 	letter-spacing: 0.01em;
 	color: #D3D3D3;
@@ -224,8 +217,12 @@ span, p, div {
 	margin-bottom: 24px;
 }
 .right__flex__content {
-	margin-right: 40px;
 	margin-left: 60px;
+}
+
+.right__about-me img {
+	width: 466px;
+	height: 613px;
 }
 
 .content__about-me .body__text:last-child {
@@ -234,7 +231,7 @@ span, p, div {
 
 .important__info {
 	color: #E4FFC9;
-	font-weight: 450;
+	font-weight: 500;
 }
 
 .left__skills {
@@ -247,7 +244,7 @@ span, p, div {
 
 .body__text.subtitle {
 	color: #e4ffc9;
-	font-weight: 450;
+	font-weight: 500;
 	margin-bottom: 20px;
 }
 
@@ -264,7 +261,7 @@ span, p, div {
 	margin-right: 12px;
 	margin-bottom: 12px;
 
-	font-weight: 450;
+	font-weight: 500;
 	font-size: 16px;
 	line-height: 130%;
 	letter-spacing: 0.01em;
@@ -293,6 +290,11 @@ span, p, div {
 .skills__tags__element.special {
 	color: #E4FFC9;
 	border-color: #E4FFC9;
+}
+
+.right__skills img {
+	width: 588px;
+	height: 535px;
 }
 
 .projects__header {
@@ -324,14 +326,14 @@ span, p, div {
 .project__case {
 	width: 466px;
 	height: 549px;
-	
+	filter: drop-shadow(0px 4px 12px rgba(12, 12, 12, 0.2));
 }
 
 .igrotime {
 	position: relative;
 	background: url('../img/igrotime-preview.jpg');
 	top: 60px;
-	left: 422px;
+	left: 382px;
 	
 }
 
@@ -344,17 +346,20 @@ span, p, div {
 	position: relative;
 	background: url('../img/blowup-preview.jpg');
 	bottom: 60px;
-	right: 422px;
+	right: 382px;
 }
 
 .project__case.active__case {
 	z-index: 10;
 }
 
-.project__case .case__name {
+.project__case .case__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	width: 100%;
 	position: absolute;
 	bottom: 20px;
-	left: 20px;
 	font-weight: 500;
 	font-size: 32px;
 	line-height: 120%;
@@ -362,6 +367,32 @@ span, p, div {
 	text-transform: uppercase;
 	color: #E4FFC9;
 }
+
+.case__content .case__name {
+	margin-left: 20px;
+}
+
+.case__content .case__button {
+	margin-right: 20px;
+}
+
+.case__button a img {
+	width: 40px;
+	height: 40px;
+}
+
+
+/*.project__case .case__name {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 120%;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
+	color: #E4FFC9;
+}*/
 
 .case__name .case__company {
 	display: block;
@@ -374,7 +405,7 @@ span, p, div {
 }
 
 .section__contacts .flex__container {
-	justify-content: start;
+	justify-content: space-between;
 	align-items: start;
 }
 
@@ -392,6 +423,7 @@ span, p, div {
 	font-weight: 500;
 	text-transform: uppercase;
 	margin-bottom: 40px;
+	text-align: right;
 }
 
 .contacts__link__list {
@@ -412,8 +444,9 @@ span, p, div {
 
 .contacts__link__list li a {
 	display: flex;
+	justify-content: flex-end;
 	padding: 8px 0;
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 400;
 	line-height: 120%;
 	letter-spacing: 0.01em;
@@ -423,4 +456,90 @@ span, p, div {
 
 .contacts__list__element img {
 	margin-right: 12px;
+}
+
+@media (max-width: 1520px) {
+	.content {
+		width: 1140px;
+	}
+	.h1 {
+		font-size: 140px;
+	}
+	.h2 {
+		font-size: 72px;
+	}
+	.h3 {
+		font-size: 64px;
+	}
+	.h4 {
+		font-size: 48px;
+	}
+	.body__text {
+		font-size: 20px;
+	}
+	.button__text {
+		font-size: 14px
+	}
+	.skills__tags__element {
+		font-size: 14px;
+	}
+	.projects__header .h1.bg-h1 {
+		font-size: 140px;
+	}
+	.nav__menu li a {
+		font-size: 16px;
+	}
+	.project__case .case__name {
+		font-size: 24px;
+	}
+	.case__name .case__company {
+		font-size: 16px;
+	}
+	.contacts__link__list li a {
+		font-size: 20px;
+	}
+	.headers__container {
+		height: 72px
+	}
+	.headers__container .h4 {
+		top: -60px;
+	}
+	.right__about-me img {
+		width: 390px;
+		height: 511px;
+	}
+	.right__skills {
+		width: 390px;
+		height: 355px;
+	}
+	.right__skills img {
+		width: 390px;
+		height: 355px;
+		/*background: url('../img/skills-insights-1520.svg');*/
+	}
+	.projects__header .h2 {
+		bottom: 100px;
+	}
+	.project__case {
+		width: 380px;
+		height: 448px;
+	}
+	.igrotime {
+		width: 380px;
+		height: 448px;
+		left: 300px;
+	}
+	.meety {
+		width: 380px;
+		height: 448px;
+	}
+	.blowup {
+		width: 380px;
+		height: 448px;
+		right: 300px;
+	}
+	.case__button a img {
+		width: 32px;
+		height: 32px;
+	}
 }

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/fullpage.min.css">
+	<link rel="stylesheet" href="fonts/stylesheet.css">
 	<link rel="icon" type="image/x-icon" sizes="16x16" href="img/favicon.ico">
-	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="css/jquery.pagepiling.css"> -->
-	<title>Portfolio</title>
+	<title>Portfolio Nikolay Tarakanov</title>
 </head>
 <body>
 	<!-- cursor -->
@@ -39,8 +38,7 @@
 			</div>
 		</div>
 	</div>
-
-
+	
 	<div class="wrapper" id="fullpage">
 		<div class="section welcome-section" data-anchor="welcome-section">
 			<div class="content">
@@ -66,12 +64,10 @@
 							<h4 class="h4">обо мне</h4>
 						</div>
 						<div class="content__about-me">
-							<p class="body__text">
-								Меня зовут <span class="important__info">Николай</span>, мне 19 лет. Родился в Казахстане.</p>
+							<p class="body__text">Меня зовут <span class="important__info">Николай</span>, мне 19 лет. Мой юзернейм - <span class="important__info">merouse</span>. Родился в Казахстане.</p>
 							<p class="body__text">Учусь в г. Омск, в ОмГТУ, по специальности "Информатика и вычислителньая техника".</p>
-							<p class="body__text">Перед поступлением уже занимался <span class="important__info">веб-разработкой</span> и <span class="important__info">веб-дизайном</span>, проходил курсы, самообучался. На тот момент выполнил 4 проекта по веб-разработке<br>для защиты курсовой и диплома.</p>
-							<p class="body__text">На данный момент сделал упор на обучение в <span class="important__info">UX/UI-, веб-дизайне</span>. Я узнаю<br>все больше, пытаюсь анализировать всю информацию и делать выводы. </p>
-							<p class="body__text">С каждым новым проектом, я анализирую свои старые работы и понимаю,<br>что сейчас могу сделать лучше, но не обесцениваю тот опыт, который получил.<br>Даже откровенно плохой, неудачный кейс заставляет двигаться дальше и обучаться.</p>
+							<p class="body__text">Перед поступлением уже занимался <span class="important__info">веб-разработкой</span> и <span class="important__info">веб-дизайном</span>, проходил курсы, самообучался. На тот момент выполнил 4 проекта по веб-разработке для защиты курсовой и диплома.</p>
+							<p class="body__text">На данный момент сделал упор на обучение в <span class="important__info">UX/UI-, веб-дизайне</span>. Я узнаю все больше, пытаюсь анализировать всю информацию и делать выводы. </p>
 						</div>
 					</div>
 					<div class="right__flex__content right__about-me">
@@ -108,18 +104,13 @@
 								<div class="skills__tags__element">обучаемость</div>
 								<div class="skills__tags__element special">c/c++</div>
 								<div class="skills__tags__element">c#</div>
-								<div class="skills__tags__element">asp.net</div>
 								<div class="skills__tags__element">python</div>
 								<div class="skills__tags__element special">программирование</div>
-								<div class="skills__tags__element">unit test</div>
-								<div class="skills__tags__element">исследование</div>
 								<div class="skills__tags__element">git</div>
-								<div class="skills__tags__element">аналитика</div>
-								<div class="skills__tags__element">тестирование</div>
 							</div>
 						</div>
 					</div>
-					<div class="right__flex__content right__skills"><img src="img/skills-insights.png" alt="skills-insights"></div>
+					<div class="right__flex__content right__skills"><img src="img/skills-insights.svg" alt="skills-insights"></div>
 				</div>
 			</div>
 		</div>
@@ -132,13 +123,22 @@
 				</div>
 				<div class="projects__cases__container">
 					<div class="project__case igrotime hoverable">
-						<div class="case__name"><span class="case__company">упаковка</span>IGROTIME</div>
+						<div class="case__content">
+							<div class="case__name"><span class="case__company">упаковка</span>IGROTIME</div>
+							<div class="case__button hoverable"><a href="#"><img src="img/arrow-right-projects.svg" alt=""></a></div>
+						</div>
 					</div>
 					<div class="project__case meety active__case hoverable">
-						<div class="case__name"><span class="case__company">онлайн-сервис</span>MEETY</div>
+						<div class="case__content">
+							<div class="case__name"><span class="case__company">онлайн-сервис</span>MEETY</div>
+							<div class="case__button hoverable"><a href="#"><img src="img/arrow-right-projects.svg" alt=""></a></div>
+						</div>
 					</div>
 					<div class="project__case blowup hoverable">
-						<div class="case__name"><span class="case__company">онлайн-магазин</span>BLOW UP HOOD</div>
+						<div class="case__content">
+							<div class="case__name"><span class="case__company">онлайн-магазин</span>BLOW UP HOOD</div>
+							<div class="case__button hoverable"><a href="#"><img src="img/arrow-right-projects.svg" alt=""></a></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -149,7 +149,7 @@
 				<div class="flex__container">
 					<div class="contacts__left">
 						<h2 class="h2 h2__contacts">связаться со мной</h2>
-						<p class="body__text">Вы можете в любое время связаться со мной и начать диалог.<br>Открыт к новым проектам.</p>
+						<p class="body__text">Вы можете в любое время связаться со мной и мы обсудим ваш проект.</p>
 					</div>
 					<div class="contacts__right">
 						<div class="body__text subtitle contacts__subtitle">контакты</div>
@@ -168,24 +168,20 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 	<script src="js/cursor.js"></script>
-	<script src="js/fullpage.js"></script>
-	<!-- <script type="text/javascript" src="js/jquery.pagepiling.js"></script> -->
+	<!-- <script src="js/fullpage.js"></script> -->
+	<script type="text/javascript" src="js/fullpage.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				//options here
 				css3: true,
 				autoScrolling: true,
-				navigation: true,
 				fitToSection: true,
-				scrollingSpeed: 800,
+				scrollingSpeed: 700,
 				scrollBar: false,
-				easingcss3: 'ease-in-out',
-				scrollHorizontally: true
+				easingcss3: 'ease-in-out'
 
 			});
-
-			//methods
 		});
 	</script>
 	<script type="text/javascript">
