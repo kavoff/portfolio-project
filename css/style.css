@@ -73,6 +73,11 @@ span, p, div {
 	justify-content: space-between;
 }
 
+.header__menu a img {
+	width: 65px;
+	height: 44px;
+}
+
 .nav__menu {
 	display: flex;
 }
