@@ -190,7 +190,7 @@ span, p, div {
 
 .button__container a {
 	display: inline-block;
-	border: 1px solid #FFFFFF;
+	border: 1.5px solid #FFFFFF;
 	padding: 20px 56px;
 	text-decoration: none;
 }
@@ -209,6 +209,8 @@ span, p, div {
 
 .button__text img {
 	margin-left: 20px;
+	width: 20px;
+	height: 12px;
 }
 
 .flex__container {
@@ -460,6 +462,8 @@ span, p, div {
 }
 
 .contacts__list__element img {
+	width: 28px;
+	height: 28px;
 	margin-right: 12px;
 }
 
