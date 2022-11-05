@@ -55,7 +55,7 @@ span, p, div {
 }
 
 .content {
-	width: 1440px;
+	max-width: 1440px;
 	margin: 0 auto;
 }
 
@@ -339,7 +339,8 @@ span, p, div {
 .igrotime {
 	position: relative;
 	background: url('../img/igrotime-preview.jpg');
-	top: 60px;
+	top: 5vh;
+	/*top: 60px;*/
 	left: 382px;
 	
 }
@@ -352,7 +353,7 @@ span, p, div {
 .blowup {
 	position: relative;
 	background: url('../img/blowup-preview.jpg');
-	bottom: 60px;
+	bottom: 5vh;
 	right: 382px;
 }
 
@@ -417,9 +418,8 @@ span, p, div {
 }
 
 .contacts__left {
-	width: 768px;
+	width: 55%;
 	text-align: right;
-	margin-right: 205px;
 }
 
 .h2__contacts {
@@ -469,7 +469,7 @@ span, p, div {
 
 @media (max-width: 1520px) {
 	.content {
-		width: 1140px;
+		max-width: 1140px;
 	}
 	.h1 {
 		font-size: 140px;
@@ -507,24 +507,32 @@ span, p, div {
 	.contacts__link__list li a {
 		font-size: 20px;
 	}
+	.projects__cases__container {
+		top: 25%;
+	}
+	.button__container a {
+		padding: 16px 44px;
+	}
 	.headers__container {
-		height: 72px
+		height: 72px;
 	}
 	.headers__container .h4 {
 		top: -60px;
 	}
 	.right__about-me img {
-		width: 390px;
-		height: 511px;
+		width: 368px;
+		height: 484px;
 	}
 	.right__skills {
-		width: 390px;
-		height: 355px;
+		width: 465px;
+		height: 422px;
 	}
 	.right__skills img {
-		width: 390px;
-		height: 355px;
-		/*background: url('../img/skills-insights-1520.svg');*/
+		width: 465px;
+		height: 422px;
+	}
+	.skills__tags__element {
+		padding: 10px 24px;
 	}
 	.projects__header .h2 {
 		bottom: 100px;
@@ -536,19 +544,125 @@ span, p, div {
 	.igrotime {
 		width: 380px;
 		height: 448px;
+		background: url("../img/igrotime-preview-1520.jpg");
 		left: 300px;
 	}
 	.meety {
 		width: 380px;
 		height: 448px;
+		background: url("../img/meety-preview-1520.jpg");
 	}
 	.blowup {
 		width: 380px;
 		height: 448px;
+		background: url("../img/blowup-preview-1520.jpg");
 		right: 300px;
 	}
 	.case__button a img {
 		width: 32px;
 		height: 32px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.content {
+		width: 900px;
+	}
+	.h1 {
+		font-size: 100px;
+	}
+	.h2 {
+		font-size: 64px;
+	}
+	.h3 {
+		font-size: 48px;
+	}
+	.h4 {
+		font-size: 36px;
+	}
+	.welcome__description {
+		width: 600px
+	}
+	.body__text {
+		font-size: 18px;
+	}
+	.button__text {
+		font-size: 14px
+	}
+	.skills__tags__element {
+		font-size: 14px;
+	}
+	.projects__header .h1.bg-h1 {
+		font-size: 100px;
+	}
+	.nav__menu li a {
+		font-size: 16px;
+	}
+	.project__case .case__name {
+		font-size: 20px;
+	}
+	.case__name .case__company {
+		font-size: 14px;
+	}
+	.contacts__link__list li a {
+		font-size: 18px;
+	}
+	.button__container a {
+		padding: 12px 32px;
+	}
+	.headers__container {
+		height: 64px;
+	}
+	.projects__cases__container {
+		top: 29%;
+	}
+	.headers__container .h4 {
+		top: -50px;
+	}
+	.right__about-me img {
+		width: 290px;
+		height: 382px;
+	}
+	.right__skills {
+		width: 367px;
+		height: 333px;
+	}
+	.right__skills img {
+		width: 367px;
+		height: 333px;
+	}
+	.skills__tags__element {
+		padding: 10px 20px;
+	}
+	.projects__header .h2 {
+		bottom: 80px;
+	}
+	.project__case {
+		width: 290px;
+		height: 342px;
+	}
+	.igrotime {
+		width: 290px;
+		height: 342px;
+		background: url("../img/igrotime-preview-1200.jpg");
+		left: 250px;
+	}
+	.meety {
+		width: 290px;
+		height: 342px;
+		background: url("../img/meety-preview-1200.jpg");
+	}
+	.blowup {
+		width: 290px;
+		height: 342px;
+		background: url("../img/blowup-preview-1200.jpg");
+		right: 250px;
+	}
+	.case__button a img {
+		width: 32px;
+		height: 32px;
+	}
+	.contacts__left {
+		width: 60%
 	}
 }
