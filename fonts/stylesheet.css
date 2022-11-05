@@ -28,7 +28,6 @@
 @font-face {
     font-family: 'Dela Gothic One';
     src: local('Dela Gothic One Regular'), local('DelaGothicOne-Regular'),
-        url('DelaGothicOne-Regular.woff2') format('woff2'),
         url('DelaGothicOne-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
