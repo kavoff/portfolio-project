@@ -5299,93 +5299,9 @@
       return nullOrSlide(getState().activeSection.activeSlide);
     }
 
-    EventEmitter.on('bindEvents', init$1);
+    
 
-    function init$1() {
-      var position = getOptions().credits.position;
-      var positionStyle = ['left', 'right'].indexOf(position) > -1 ? "".concat(position, ": 0;") : '';
-      var waterMark = "\n        <div class=\"fp-watermark\" style=\"".concat(positionStyle, "\">\n            <a href=\"https://alvarotrigo.com/fullPage/\" \n                rel=\"nofollow noopener\" \n                target=\"_blank\" \n                style=\"text-decoration:none; color: #000;\">\n                    ").concat(getOptions().credits.label, "\n            </a>\n        </div>\n    ");
-      var lastSection = getLast(state.sections);
-      var shouldUseWaterMark = getOptions().credits.enabled && !state.isValid;
-
-      // if (lastSection && lastSection.item && shouldUseWaterMark) {
-      //   lastSection.item.insertAdjacentHTML('beforeend', waterMark);
-      // }
-    }
-
-    !function () {
-      EventEmitter.on("onInitialise", function () {
-        var n, s;
-        setState({
-          isValid: (getOptions().licenseKey, n = getOptions().licenseKey, s = function (n) {
-            var e = parseInt("\x35\x31\x34").toString(16);
-            if (!n || n.length < 29 || 4 === n.split(t[0]).length) return null;
-            var i = ["\x45\x61\x63\x68", "\x66\x6f\x72"][r()]().join(""),
-                s = n[["\x73\x70\x6c\x69\x74"]]("-"),
-                l = [];
-            s[i](function (t, n) {
-              if (n < 4) {
-                var i = function (t) {
-                  var n = t[t.length - 1],
-                      e = ["\x4e\x61\x4e", "\x69\x73"][r()]().join("");
-                  return window[e](n) ? o(n) : function (t) {
-                    return t - ACTIVE.length;
-                  }(n);
-                }(t);
-
-                l.push(i);
-                var a = o(t[i]);
-
-                if (1 === n) {
-                  var s = ["\x70\x61", "\x64\x53", "\x74", "\x61\x72\x74"].join("");
-                  a = a.toString()[s](2, "0");
-                }
-
-                e += a, 0 !== n && 1 !== n || (e += "-");
-              }
-            });
-            var p = 0,
-                c = "";
-            return n.split("-").forEach(function (t, n) {
-              if (n < 4) {
-                var _r = 0;
-
-                for (var e = 0; e < 4; e++) {
-                  e !== l[n] && (_r += Math.abs(o(t[e])), isNaN(t[e]) || p++);
-                }
-
-                var i = a(_r);
-                c += i;
-              }
-            }), c += a(p), {
-              v: new Date(e + "T00:00"),
-              o: e.split("-")[2] === 8 * (ACTIVE.length - 2) + "",
-              l: c
-            };
-          }(n), s && (getOptions().credits && s && e <= s.v && s.l === n.split(t[0])[4] || function (t) {
-            var n = i[r()]().join("");
-            return t && 0 === n.indexOf(t) && t.length === n.length;
-          }(n) || s.o) || !1)
-        });
-      });
-      var t = ["-"];
-      var n = "2022-8-8".split("-"),
-          e = new Date(n[0], n[1], n[2]),
-          i = ["se", "licen", "-", "v3", "l", "gp"];
-
-      function r() {
-        return [["\x72\x65", "\x76\x65\x72\x73\x65"].join("")]["".length];
-      }
-
-      function o(t) {
-        return t ? isNaN(t) ? t.charCodeAt(0) - 72 : t : "";
-      }
-
-      function a(t) {
-        var n = 72 + t;
-        return n > 90 && n < 97 && (n += 15), String.fromCharCode(n).toUpperCase();
-      }
-    }();
+    
 
     //@ts-check
     FP.setKeyboardScrolling = setKeyboardScrolling;
@@ -5697,17 +5613,6 @@
     function displayWarnings() {
       var l = getOptions()['li' + 'c' + 'enseK' + 'e' + 'y'];
       var msgStyle = 'font-size: 15px;background:yellow;';
-
-      if (getOptions().licenseKey.trim() === '') {
-        showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following URL:');
-        showError('error', 'https://github.com/alvarotrigo/fullPage.js#options');
-      } else if (!isOK()) {
-        showError('error', 'Incorrect `licenseKey`. Get one for fullPage.js version 4 here:');
-        showError('error', 'https://alvarotrigo.com/fullPage/pricing');
-      } else if (l && l.length < 20) {
-        console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
-        console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
-      }
 
       if (hasClass($html, ENABLED)) {
         showError('error', 'Fullpage.js can only be initialized once and you are doing it multiple times!');

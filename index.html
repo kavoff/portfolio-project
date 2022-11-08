@@ -6,7 +6,7 @@
 	<meta name="description" content="Сайт-портфолио веб-дизайнера Тараканова Николая. Разработка дизайна сайтов, упаковок, баннеров, логотипов, рекламных материалов.">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="fonts/stylesheet.css">
-	<link rel="stylesheet" href="css/fullpage.min.css">
+	<!-- <link rel="stylesheet" href="css/fullpage.min.css"> -->
 	<link rel="icon" type="image/x-icon" sizes="16x16" href="img/favicon.ico">
 	<title>Portfolio Nikolay Tarakanov</title>
 </head>
@@ -43,9 +43,9 @@
 	<div class="wrapper" id="fullpage">
 		<div class="section welcome-section" data-anchor="welcome-section">
 			<div class="content">
-				<h1 class="h1">Привет</h1>
+				<h1 class="h1">Портфолио</h1>
 				<div class="content__col-3">
-					<h3 class="h3">это сайт-портфолио</h3>
+					<h3 class="h3">Николай Тараканов</h3>
 					<p class="body__text welcome__description">
 						Здесь вы можете познакомиться со мной и найти всю необходимую информацию обо мне, моих навыках, учебе и достижениях.
 					</p>
@@ -66,7 +66,7 @@
 						</div>
 						<div class="content__about-me">
 							<p class="body__text">Меня зовут <span class="important__info">Николай</span>, мне 19 лет. Мой юзернейм - <span class="important__info">merouse</span>. Родился в Казахстане.</p>
-							<p class="body__text">Учусь в г. Омск, в ОмГТУ, по специальности "Информатика и вычислителньая техника".</p>
+							<p class="body__text">Учусь в университете, получаю степень бакалавра по специальности "Информатика и вычислительная техника".</p>
 							<p class="body__text">Перед поступлением уже занимался <span class="important__info">веб-разработкой</span> и <span class="important__info">веб-дизайном</span>, проходил курсы, самообучался. На тот момент выполнил 4 проекта по веб-разработке для защиты курсовой и диплома.</p>
 							<p class="body__text">На данный момент сделал упор на обучение в <span class="important__info">UX/UI-, веб-дизайне</span>. Я узнаю все больше, пытаюсь анализировать всю информацию и делать выводы. </p>
 						</div>
@@ -169,8 +169,7 @@
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js' async=""></script>
-	<script src="js/cursor.js" async=""></script>
-	<!-- <script src="js/fullpage.js"></script> -->
+	<!-- <script src="js/cursor.js" async=""></script> -->
 	<script type="text/javascript" src="js/fullpage.js"></script>
 	<script>
 		$(document).ready(function() {
@@ -208,12 +207,42 @@
 			$('.project__case').not(this).removeClass('active__case');
 		});
 
-		// hover project card
-		$("div.main").mouseenter(function(){
-			$(this).addClass("change").delay(5000).queue(function(){
-				$(this).removeClass("change").dequeue();
-			});
-		});
+		// cursor
+		const $bigBall = document.querySelector('.cursor__ball--big');
+		const $smallBall = document.querySelector('.cursor__ball--small');
+		const $hoverables = document.querySelectorAll('.hoverable');
+
+		// Listeners
+		document.body.addEventListener('mousemove', onMouseMove);
+		for (let i = 0; i < $hoverables.length; i++) {
+		  $hoverables[i].addEventListener('mouseenter', onMouseHover);
+		  $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+		}
+		
+
+		// Move the cursor
+		function onMouseMove(e) {
+		  TweenMax.to($bigBall, .4, {
+		    x: e.pageX - 15,
+		    y: e.pageY - 15 });
+
+		  TweenMax.to($smallBall, .1, {
+		    x: e.pageX - 5,
+		    y: e.pageY - 7 });
+
+		}
+
+		// Hover an element
+		function onMouseHover() {
+		  TweenMax.to($bigBall, .3, {
+		    scale: 4 });
+		}
+
+		function onMouseHoverOut() {
+		  TweenMax.to($bigBall, .3, {
+		    scale: 1 });
+		} 
+		
 	</script>
 </body>
 </html>
